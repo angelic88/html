@@ -76,6 +76,28 @@
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
 
+    .back-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-button a button {
+      width: 200px;
+      background-color: #ffb347;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .back-button a button:hover {
+      background-color: #ff9933;
+      transform: scale(1.04);
+    }
+
     p {
       margin: 8px 0 16px;
       font-size: 15px;
@@ -84,7 +106,8 @@
     span {
       font-weight: bold;
       color: #1a535c;
-    
+    }
+
     footer {
       text-align: center;
       margin-top: 40px;
@@ -109,7 +132,13 @@
   <p>Result: <span id="bmiResult"></span></p>
 </div>
 
-<a href="project.html">Go Back</a></h2>
+<!-- Back to Project Page Button -->
+<div class="back-button">
+  <a href="project.html">
+    <button>⬅ Back to Project Page</button>
+  </a>
+</div>
+
 <footer>© 2025 Liyanna Muschamp 💚</footer>
 
 <script>
@@ -132,10 +161,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-

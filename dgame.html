@@ -61,6 +61,29 @@
             margin-top: 15px;
         }
 
+        /* Back button */
+        .back-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .back-button button {
+            width: 200px;
+            background-color: #ffb347;
+            color: white;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-button button:hover {
+            background-color: #ff9933;
+            transform: scale(1.04);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -91,6 +114,11 @@
     <button onclick="updateDistrict('Toledo', 'Images/Toledo.png')">Toledo</button>
     <button onclick="updateDistrict('No', 'Images/Blank_map_of_Belize.png')">Reset Map</button>
 
+    <!-- Back to Project Page Button -->
+    <div class="back-button">
+        <button onclick="window.location.href='project.html'">⬅ Back to Project Page</button>
+    </div>
+
     <footer>© 2025 Belize District Identifier</footer>
 
     <script>
@@ -103,6 +131,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 

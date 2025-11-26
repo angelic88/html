@@ -2,42 +2,63 @@
 <html>
 <head>
 <title>FoC</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
-<body>
+
+<body style="margin:0; padding:0; background-color:#ffb347;">
+
 <center>
-<section>
+<section style="padding:20px;">
 <h2>Project 1: Not Gate</h2>
 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
+<div class="row" style="display:flex; justify-content:center; align-items:center; gap:30px;">
+
+  <!-- INPUT -->
+  <div class="column" style="background-color:#ffbe73; padding:20px; border-radius:10px;">
     <h2>Input</h2>
-    <p><button style="width: 100px; height: 40px;" onclick="document.getElementById('belizeImage').src='noton2.png'">ON</button></p>
-    <p><button style="width: 100px; height: 40px;" onclick="document.getElementById('belizeImage').src='notoff2.png'">OFF</button></p>
+
+    <p>
+      <button style="width: 100px; height: 40px;" 
+              onclick="document.getElementById('belizeImage').src='Images/noton2.png'">
+        ON
+      </button>
+    </p>
+
+    <p>
+      <button style="width: 100px; height: 40px;" 
+              onclick="document.getElementById('belizeImage').src='Images/notoff2.png'">
+        OFF
+      </button>
+    </p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+
+  <!-- OUTPUT -->
+  <div class="column" style="background-color:#ffc87f; padding:20px; border-radius:10px;">
     <h2>Output</h2>
-	<hr>
-	<img id="belizeImage" src="noton2.png" alt="noton" width="400" height="86" align="center">
+    <hr>
+    <img id="belizeImage" src="Images/noton2.png" width="400" height="86">
   </div>
+
 </div>
-<a href="html/project.html">Back to Projects</a>
+
+<!-- Reduced space between Back to Home and Footer -->
+<div style="margin-top:5px;">
+  <a href="index.html">Back to Projects</a>
+</div>
 
 </section>
 </center>
 
-
-
-<footer>
+<footer style="padding:5px 0; margin-top:0;">
   <p>@ Powered by UB</p>
 </footer>
 
 </body>
 </html>
+
+
 
 
 

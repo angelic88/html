@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ASCII Table</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffb347;
+  font-family: 'Comic Neue', cursive;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Layout for image and input side by side */
+.ascii-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+/* Box around the image */
+.ascii-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.ascii-img {
+  width: 750px; /* slightly larger */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Input and button container */
+.input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertically with the image */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Make the text above the input/button larger */
+.input-box p {
+  font-size: 22px; /* larger text */
+  margin: 5px 0;
+}
+
+input {
+  font-size: 20px; /* larger input text */
+  padding: 10px 20px; /* bigger input */
+  border-radius: 6px;
+}
+
+button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 12px 30px; /* larger button */
+  font-size: 18px; /* button text size */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #006e94;
+  transform: scale(1.05);
+}
+
+.back-link {
+  display: block;
+  margin: 25px 0 10px 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: #004d40;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h2>Project 4: ASCII</h2>
+
+<div class="ascii-container">
+  <!-- IMAGE BOX ON LEFT -->
+  <div class="ascii-box">
+    <img src="Images/ascii.png" class="ascii-img">
+  </div>
+
+  <!-- INPUT BOX ON RIGHT -->
+  <div class="input-box">
+    <p>Enter any number from 0 to 127:</p>
+    <input id="inputdec">
+    <button onclick="decToASCII()">Submit</button>
+    <p>ASCII Value:</p>
+    <p id="demo"></p>
+  </div>
+</div>
+
+<a href="project.html" class="back-link">Back to Projects</a>
+
+<footer style="margin-top:0; padding:5px 0;">
+  <p>@ Powered by UB</p>
+</footer>
+
+<script>
+function decToASCII() {
+  const x = document.getElementById("inputdec").value;
+  const res = String.fromCharCode(x);
+  document.getElementById("demo").innerHTML = res;
+  console.log(res);
+}
+</script>
+
+</section>
+
+</body>
+</html>

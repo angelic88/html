@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liyanna Muschamp - Resume</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0e0e0e;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .resume-box {
+            width: 1000px;
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 25px rgba(0,0,0,0.55);
+            display: grid;
+            grid-template-columns: 320px auto;
+        }
+
+        /* LEFT COLUMN */
+        .left-column {
+            background-color: #141414;
+            color: #fff;
+            padding: 45px 35px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #0c7e78;
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            background-color: #0c7e78;
+            padding: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-top: 40px; /* space before each section title */
+        }
+
+        .left-column p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-top: 12px; /* space after title */
+            margin-bottom: 35px; /* space before next title for separation */
+        }
+
+        .left-column a {
+            color: #0c7e78;
+            font-size: 17px;
+            text-decoration: none;
+        }
+
+        /* RIGHT COLUMN */
+        .right-column {
+            background-color: #ffffff;
+            padding: 60px;
+        }
+
+        .header-name {
+            font-size: 55px;
+            font-weight: bold;
+            margin: 0;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+        }
+
+        .header-subtitle {
+            color: #0c7e78;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 45px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #0c7e78;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #0c7e78;
+            padding-bottom: 6px;
+            font-size: 26px;
+        }
+
+        .info-block {
+            margin-bottom: 45px;
+            line-height: 1.9;
+        }
+
+        .info-block p {
+            font-size: 18px;
+            margin-top: 12px;
+        }
+
+        .skills-list {
+            margin-top: 20px;
+        }
+
+        .skills-list li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="resume-box">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+
+        <img src="Images/me.jpg" alt="Profile Picture" class="profile-img">
+
+        <div class="section-title">Contact</div>
+        <p><span style="margin-right:8px;">📧</span>Email: 2025163234@ub.edu.bz</p>
+
+        <div class="section-title">Link</div>
+        <p><span style="margin-right:8px;">🔗</span><a href="https://github.com/angelic88">Repository</a></p>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+
+        <h1 class="header-name">Liyanna Muschamp</h1>
+        <div class="header-subtitle">IT Student</div>
+
+        <div class="info-block">
+            <h2>Profile</h2>
+            <p>
+                Hardworking and responsible student pursuing an Associate’s degree in Information Technology 
+                at the University of Belize. Enjoys programming, working on projects, and improving her skills. 
+                Has experience from school projects and small business activities.
+            </p>
+        </div>
+
+        <div class="info-block">
+            <h2>Education</h2>
+            <p><strong>University of Belize</strong> — Associate’s in Information Technology (Ongoing)</p>
+            <p><strong>Belmopan Comprehensive School</strong> — High School Diploma</p>
+            <p><strong>United Evergreen Primary School</strong> — Primary School Diploma</p>
+        </div>
+
+        <div class="info-block">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML, Python, C++</li>
+                <li>Teamwork</li>
+                <li>Leadership</li>
+                <li>Problem-solving</li>
+                <li>Organization</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

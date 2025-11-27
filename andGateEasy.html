@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Easy AND Gate</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffb347;
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .buttons-container {
+    margin: 15px 0;
+  }
+
+  .buttons-container button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.2s;
+  }
+
+  .buttons-container button:hover {
+    background-color: #006e94;
+    transform: scale(1.05);
+  }
+
+  /* Output box styling */
+  .output-box {
+    background-color: #ffbe73;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  #myImage {
+    width: 600px; /* slightly smaller to see the box outline */
+  }
+
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #004d40;
+  }
+
+  footer {
+    padding: 5px 0;
+    margin-top: 20px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<section>
+  <h2>AND Gate (Easy Version)</h2>
+  <p>This is an animation of an AND Logic Gate</p>
+
+  <div class="buttons-container">
+    <button onclick="document.getElementById('myImage').src='Images/and2off.png'">0 AND 0</button>
+    <button onclick="document.getElementById('myImage').src='Images/andoffon.png'">0 AND 1</button>
+    <button onclick="document.getElementById('myImage').src='Images/andonoff.png'">1 AND 0</button>
+    <button onclick="document.getElementById('myImage').src='Images/and2on.png'">1 AND 1</button>
+  </div>
+
+  <!-- Output box -->
+  <div class="output-box">
+    <img id="myImage" src="Images/and2off.png">
+  </div>
+
+  <a href="project.html" class="back-link">Back to Projects</a>
+</section>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>

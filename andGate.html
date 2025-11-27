@@ -75,14 +75,14 @@
   function toggleInputOne() {
     inputOne = !inputOne;
     document.getElementById("toggleImage").src =
-      inputOne ? "andGate-Images/button-on-xxl.png" : "andGate-Images/button-off-xxl.png";
+      inputOne ? "Images/button-on-xxl.png" : "Images/button-off-xxl.png";
     updateAndGate();
   }
 
   function toggleInputTwo() {
     inputTwo = !inputTwo;
     document.getElementById("toggleImage2").src =
-      inputTwo ? "andGate-Images/button-on-xxl.png" : "andGate-Images/button-off-xxl.png";
+      inputTwo ? "Images/button-on-xxl.png" : "Images/button-off-xxl.png";
     updateAndGate();
   }
 
@@ -90,13 +90,13 @@
     const gate = document.getElementById("andGate");
 
     if (!inputOne && !inputTwo) {
-      gate.src = "andGate-Images/and2off.png";      // 0 0
+      gate.src = "Images/and2off.png";      // 0 0
     } else if (!inputOne && inputTwo) {
-      gate.src = "andGate-Images/andoffon.png";     // 0 1
+      gate.src = "Images/andoffon.png";     // 0 1
     } else if (inputOne && !inputTwo) {
-      gate.src = "andGate-Images/andonoff.png";     // 1 0
+      gate.src = "Images/andonoff.png";     // 1 0
     } else {
-      gate.src = "andGate-Images/and2on.png";       // 1 1
+      gate.src = "Images/and2on.png";       // 1 1
     }
   }
 

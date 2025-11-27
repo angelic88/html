@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ML</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffb347;
+  font-family: 'Comic Neue', cursive;
+  text-align: center;
+}
+
+/* Container for buttons and ML image side by side */
+.ml-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; /* space between buttons and image */
+  margin-top: 20px;
+}
+
+/* Box for buttons */
+.button-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between buttons */
+}
+
+/* Style for buttons */
+.button {
+  background-color: #008CBA; 
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: #006e94;
+  transform: scale(1.05);
+}
+
+/* Container for ML and English image aligned together */
+.image-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Machine Language Image */
+.ml-image {
+  width: 500px;
+  height: auto;
+  border: 2px solid #004d40;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* English instructions image aligned with ML image */
+.english-image {
+  width: 500px;
+  height: auto;
+  border: 2px solid #004d40;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Back link under everything */
+.back-link {
+  display: block;
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: #004d40;
+}
+</style>
+</head>
+
+<body>
+
+<h2>A Simple Interactive Machine Language</h2>
+
+<div class="ml-container">
+  <!-- Buttons on the left -->
+  <div class="button-box">
+    <button class="button" onclick="document.getElementById('MLinstrucitons').src='Images/ML1.png'; document.getElementById('Englishinstrucitons').src='Images/EI1.png'">156C</button>
+    <button class="button" onclick="document.getElementById('MLinstrucitons').src='Images/ML2.png'; document.getElementById('Englishinstrucitons').src='Images/EI2.png'">166D</button>
+    <button class="button" onclick="document.getElementById('MLinstrucitons').src='Images/ML3.png'; document.getElementById('Englishinstrucitons').src='Images/EI3.png'">5056</button>
+    <button class="button" onclick="document.getElementById('MLinstrucitons').src='Images/ML4.png'; document.getElementById('Englishinstrucitons').src='Images/EI4.png'">306E</button>
+    <button class="button" onclick="document.getElementById('MLinstrucitons').src='Images/ML5.png'; document.getElementById('Englishinstrucitons').src='Images/EI5.png'">C000</button>
+  </div>
+
+  <!-- ML and English images in a vertical box -->
+  <div class="image-box">
+    <img id="MLinstrucitons" class="ml-image" src="Images/MLblank.png">
+    <img id="Englishinstrucitons" class="english-image" src="">
+  </div>
+</div>
+
+<!-- Back to projects -->
+<a href="projects.html" class="back-link">Back to Projects</a>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>

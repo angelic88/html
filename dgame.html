@@ -60,10 +60,11 @@
             font-weight: bold;
             margin-top: 15px;
         }
-        
+
         .back-link {
+            text-align: center;
             display: block;
-            margin: 25px 0 10px 0;
+            margin-top: 20px;
             font-weight: bold;
             text-decoration: none;
             color: #004d40;
@@ -99,13 +100,12 @@
     <button onclick="updateDistrict('Toledo', 'Images/Toledo.png')">Toledo</button>
     <button onclick="updateDistrict('No', 'Images/Blank_map_of_Belize.png')">Reset Map</button>
 
-    <center>
-        <a href="project.html" class="back-link">Back to Projects</a>
-    
-    <footer>© 2025 Belize District Identifier</footer>
-        
-    </center
-        
+    <div>
+    <a href="projects.html" class="back-link">Back to Projects</a>
+    </div>
+
+    <footer>© Powered by LM</footer>
+
     <script>
         function updateDistrict(name, image) {
             // Change the map image
@@ -116,6 +116,7 @@
     </script>
 </body>
 </html>
+
 
 
 

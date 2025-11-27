@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AND Gate</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #004d40;
+  }
+
+</style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#ffb347;">
+
+<center>
+<section style="padding:20px;">
+<h2>Project 2: AND Gate</h2>
+
+<div class="row" style="display:flex; justify-content:center; align-items:flex-start; gap:30px;">
+
+  <!-- INPUT BOX -->
+  <div class="column" style="background-color:#ffbe73; padding:20px; border-radius:10px;">
+    <h2>Input</h2>
+
+    <img src="Images/button-off-xxl.png" id="toggleImage" 
+         onclick="toggleInputOne();" style="width:110px; cursor:pointer;">
+    <br><br>
+
+    <img src="Images/button-off-xxl.png" id="toggleImage2" 
+         onclick="toggleInputTwo();" style="width:110px; cursor:pointer;">
+  </div>
+
+  <!-- OUTPUT BOX -->
+  <div class="column" style="background-color:#ffbe73; padding:20px; border-radius:10px;">
+    <h2>Output</h2>
+    <hr>
+    <img id="andGate" src="Images/and2off.png" style="width:750px;"> <!-- LARGER IMAGE -->
+  </div>
+
+</div>
+
+<!-- RUN BUTTON -->
+<div style="margin-top:15px;">
+  <button onclick="andGate()" 
+          style="background:#008CBA; color:white; border:none; padding:12px 28px; 
+                 font-size:17px; border-radius:10px; cursor:pointer;">
+    Run
+  </button>
+</div>
+
+<!-- Back to Projects button styled -->
+<div>
+  <a href="project.html" class="back-link">Back to Projects</a>
+</div>
+
+</section>
+</center>
+
+<footer style="padding:5px 0; margin-top:0;">
+  <p>@ Powered by UB</p>
+</footer>
+
+<script>
+  let inputOne = false;
+  let inputTwo = false;
+
+  function toggleInputOne() {
+    inputOne = !inputOne;
+    document.getElementById("toggleImage").src =
+      inputOne ? "andGate-Images/button-on-xxl.png" : "andGate-Images/button-off-xxl.png";
+    updateAndGate();
+  }
+
+  function toggleInputTwo() {
+    inputTwo = !inputTwo;
+    document.getElementById("toggleImage2").src =
+      inputTwo ? "andGate-Images/button-on-xxl.png" : "andGate-Images/button-off-xxl.png";
+    updateAndGate();
+  }
+
+  function updateAndGate() {
+    const gate = document.getElementById("andGate");
+
+    if (!inputOne && !inputTwo) {
+      gate.src = "andGate-Images/and2off.png";      // 0 0
+    } else if (!inputOne && inputTwo) {
+      gate.src = "andGate-Images/andoffon.png";     // 0 1
+    } else if (inputOne && !inputTwo) {
+      gate.src = "andGate-Images/andonoff.png";     // 1 0
+    } else {
+      gate.src = "andGate-Images/and2on.png";       // 1 1
+    }
+  }
+
+  function andGate() {
+    alert(
+      "Input 1: " + (inputOne ? 1 : 0) +
+      "\nInput 2: " + (inputTwo ? 1 : 0) +
+      "\nAND Output: " + (inputOne && inputTwo ? 1 : 0)
+    );
+  }
+</script>
+
+</body>
+</html>

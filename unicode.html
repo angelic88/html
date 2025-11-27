@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unicode Converter</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffb347;
+  font-family: 'Comic Neue', cursive;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Main container: images on left, input/output on right */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Images column */
+.images-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;
+}
+
+.image-box {
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image-box img {
+  width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Input/output column */
+.io-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+input {
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #006e94;
+  transform: scale(1.05);
+}
+
+/* Clean output display */
+#demo {
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Back link moved under input/button */
+.back-link {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #004d40;
+}
+
+footer {
+  padding: 5px 0;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h2>Project 4: UNICODE</h2>
+
+<div class="main-container">
+
+  <!-- Left column: images -->
+  <div class="images-column">
+    <!-- Top row: two images side by side -->
+    <div class="image-row">
+      <div class="image-box">
+        <img src="Images/uni1.jpg">
+      </div>
+      <div class="image-box">
+        <img src="Images/uni3.jpg">
+      </div>
+    </div>
+    <!-- Bottom row: one image centered -->
+    <div class="image-row" style="justify-content: center;">
+      <div class="image-box">
+        <img src="Images/uni4.jpg">
+      </div>
+    </div>
+  </div>
+
+  <!-- Right column: input, button, output, back link -->
+  <div class="io-column">
+    <p>Please input UNICODE number:</p>
+    <input id="numb" type="text">
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <!-- Output display -->
+    <div id="demo"></div>
+
+    <!-- Back link under input/button -->
+    <a href="project.html" class="back-link">Back to Projects</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>
+
+<script>
+function myFunction() {
+  const x = document.getElementById("numb").value;
+  const unicode = "&#x" + x;
+  document.getElementById("demo").innerHTML = unicode;
+}
+</script>
+
+</section>
+</body>
+</html>

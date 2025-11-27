@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Data Structures - Interactive Visualizer</title>
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(120deg, #a8edea, #fed6e3);
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #222;
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .structure {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .structure:hover {
+      transform: scale(1.03);
+    }
+
+    button {
+      background-color: #6a5acd;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #836fff;
+    }
+
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 5px;
+      width: 70%;
+    }
+
+    .visual {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      min-height: 50px;
+      margin-top: 15px;
+    }
+
+    .box {
+      background-color: #ffb6c1;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      color: #222;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Basic Data Structures Playground</h1>
+  <p>Use the controls below to explore how Arrays, Stacks, and Queues store and manage data!</p>
+
+  <div class="container">
+    <!-- ARRAY -->
+    <div class="structure">
+      <h2>Array</h2>
+      <input type="text" id="arrayInput" placeholder="Enter element">
+      <button onclick="addToArray()">Add</button>
+      <button onclick="removeFromArray()">Remove Last</button>
+      <div class="visual" id="arrayVisual"></div>
+    </div>
+
+    <!-- STACK -->
+    <div class="structure">
+      <h2>Stack (LIFO)</h2>
+      <input type="text" id="stackInput" placeholder="Push element">
+      <button onclick="pushStack()">Push</button>
+      <button onclick="popStack()">Pop</button>
+      <div class="visual" id="stackVisual"></div>
+    </div>
+
+    <!-- QUEUE -->
+    <div class="structure">
+      <h2>Queue (FIFO)</h2>
+      <input type="text" id="queueInput" placeholder="Enqueue element">
+      <button onclick="enqueue()">Enqueue</button>
+      <button onclick="dequeue()">Dequeue</button>
+      <div class="visual" id="queueVisual"></div>
+    </div>
+  </div>
+
+  <script>
+    // ARRAY
+    let arr = [];
+    function addToArray() {
+      const val = document.getElementById("arrayInput").value;
+      if (val) arr.push(val);
+      document.getElementById("arrayInput").value = "";
+      displayArray();
+    }
+
+    function removeFromArray() {
+      arr.pop();
+      displayArray();
+    }
+
+    function displayArray() {
+      const visual = document.getElementById("arrayVisual");
+      visual.innerHTML = "";
+      arr.forEach(item => {
+        const box = document.createElement("div");
+        box.className = "box";
+        box.textContent = item;
+        visual.appendChild(box);
+      });
+    }
+
+    // STACK (LIFO)
+    let stack = [];
+    function pushStack() {
+      const val = document.getElementById("stackInput").value;
+      if (val) stack.push(val);
+      document.getElementById("stackInput").value = "";
+      displayStack();
+    }
+
+    function popStack() {
+      stack.pop();
+      displayStack();
+    }
+
+    function displayStack() {
+      const visual = document.getElementById("stackVisual");
+      visual.innerHTML = "";
+      stack.slice().reverse().forEach(item => {
+        const box = document.createElement("div");
+        box.className = "box";
+        box.style.backgroundColor = "#98fb98";
+        box.textContent = item;
+        visual.appendChild(box);
+      });
+    }
+
+    // QUEUE (FIFO)
+    let queue = [];
+    function enqueue() {
+      const val = document.getElementById("queueInput").value;
+      if (val) queue.push(val);
+      document.getElementById("queueInput").value = "";
+      displayQueue();
+    }
+
+    function dequeue() {
+      queue.shift();
+      displayQueue();
+    }
+
+    function displayQueue() {
+      const visual = document.getElementById("queueVisual");
+      visual.innerHTML = "";
+      queue.forEach(item => {
+        const box = document.createElement("div");
+        box.className = "box";
+        box.style.backgroundColor = "#87cefa";
+        box.textContent = item;
+        visual.appendChild(box);
+      });
+    }
+  </script>
+</body>
+</html>
